@@ -1,1 +1,12 @@
+# Create a data frame with average height by age for children 6-12 in inches
+age <- c(6, 7, 8, 9, 10, 11, 12)
+height <- c(45, 48, 51, 54, 57, 60, 63)
+data <- data.frame(age, height)
+
+# Create a bar graph using base R
+barplot(data$height, names.arg = data$age, 
+        xlab = "Age (years)", ylab = "Height (inches)", 
+        main = "Average Height by Age for Children 6-12 in the US",
+        col = "blue", ylim = c(0, max(data$height) * 1.2), 
+        border = NA, space = 0.4, width = 0.4)
 
